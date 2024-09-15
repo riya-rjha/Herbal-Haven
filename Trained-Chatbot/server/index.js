@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+const genAI = new GoogleGenerativeAI("AIzaSyA47_74hiKoWc51vf_nOq4hH273qJFTgZk");
 
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
