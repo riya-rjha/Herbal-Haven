@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
@@ -10,7 +10,7 @@ function App() {
     const userMessage = input;
     setMessages([...messages, { role: "user", text: userMessage }]);
 
-    const response = await axios.post("http://localhost:5000/chat", {
+    const response = await axios.post("https://chat-bot-two-lake.vercel.app/chat", {
       userMessage,
     });
     const botMessage = response.data.response;
